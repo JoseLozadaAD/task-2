@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My HTML Project</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <section class="form__container">
+            <h1>Reservation Request</h1>
+            <form id="form">
+                <fieldset>
+                    <legend>General information</legend>
+                    <div class="input__field">
+                        <label for="arrival">Arrival date:</label>
+                        <input type="date" id="arrival" name="arrival">
+                        <p class="error error--arrival hidden"></p>
+                    </div>
+
+                    <div class="input__field">
+                        <label for="nights">Nights:</label>
+                        <input type="number" id="nights" name="nights" min="0" max="100"
+                            placeholder="0">
+                        <p class="error error--nights hidden"></p>
+                    </div>
+
+                    <div class="input__field">
+                        <label for="adults">Adults:</label>
+                        <input type="number" id="adults" name="adults" min="0" max="100"
+                            placeholder="0">
+                        <p class="error error--adults hidden"></p>
+                    </div>
+
+                    <div class="input__field">
+                        <label for="children">Children:</label>
+                        <input type="number" id="children" name="children" min="0" max="100"
+                            placeholder="0">
+                        <p class="error error--children hidden"></p>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferences</legend>
+                    <div class="radio">
+                        <label for="roomType" class="radio__label">Room type:</label>
+
+                        <input type="radio" id="standard" name="roomType" value="standard" checked>
+                        <label for="standard">Standard</label>
+
+                        <input type="radio" id="business" name="roomType" value="business">
+                        <label for="business">Business</label>
+
+                        <input type="radio" id="suite" name="roomType" value="suite">
+                        <label for="suite">Suite</label>
+                    </div>
+
+                    <div class="radio">
+                        <label for="bedType" class="radio__label">Bed type:</label>
+
+                        <input type="radio" id="king" name="bedType" value="king" checked>
+                        <label for="king">King</label>
+
+                        <input type="radio" id="double" name="bedType" value="double">
+                        <label for="double">Double double</label>
+                    </div>
+
+                    <div class="radio">
+                        <input type="checkbox" id="smoking" name="smoking" value="smoking">
+                        <label for="smoking">Do you smoke?</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contact information</legend>
+                    <div class="input__field">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="John doe">
+                        <p class="error error--name hidden"></p>
+                    </div>
+                    <div class="input__field">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required
+                            placeholder="email@email.com">
+                        <p class="error error--email hidden"></p>
+                    </div>
+
+                    <div class="input__field">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="78853113">
+                        <p class="error error--phone hidden"></p>
+                    </div>
+                </fieldset>
+
+                <div class="input__buttons">
+                    <input id="submitButton" type="submit" value="Submit reservation">
+                    <input id="resetButton" type="reset" value="Reset">
+                </div>
+            </form>
+        </section>
+
+        <aside class="reservations">
+            <table border="1px">
+                <thead>
+                    <tr>
+                        <th colspan="4">General Information</th>
+                        <th colspan="3">Preferences</th>
+                        <th colspan="3">Contact Information</th>
+                        <th>Actions</th>
+                    </tr>
+
+                    <tr>
+                        <th>Arrival date</th>
+                        <th>Nights</th>
+                        <th>Adults</th>
+                        <th>Children</th>
+                        <th>Room type</th>
+                        <th>Bed type</th>
+                        <th>Smoking</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody></tbody>
+            </table>
+
+        </aside>
+    </main>
+
+    <div class="modal hidden">
+        <div class="modal__content">
+            <h2>Do you want to delete a reservation ?</h2>
+            <div class="modal__buttons">
+                <button class="btn--confirm" id="yes">Yes</button>
+                <button class="btn--cancel" id="no">No</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form__container {
+  max-width: 500px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  height: auto;
+}
+
+.input__field,
+.radio {
+  margin-top: 10px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+}
+
+.radio__label {
+  min-width: 80px;
+}
+
+.input__field {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr 2fr;
+}
+
+.input__buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input[type='number'] {
+  max-width: 70px;
+}
+
+.error {
+  color: red;
+  margin: 0;
+  margin-left: 10px;
+  font-size: 0.8rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+table {
+  border: 0.5px solid rgba(0, 0, 0, 0.15);
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+table th,
+td {
+  text-align: center;
+  padding: 8px;
+}
+
+.btn--delete {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.modal__buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.btn--confirm {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn--cancel {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
